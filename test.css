@@ -1,0 +1,900 @@
+/* ================================
+   IT KIDS — CREATIVE TEST DESIGN
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 10% 20%, #fff3a8 0 70px, transparent 71px),
+        radial-gradient(circle at 90% 15%, #b9f3ff 0 90px, transparent 91px),
+        radial-gradient(circle at 15% 90%, #ffd0e8 0 80px, transparent 81px),
+        linear-gradient(135deg, #6c63ff, #8e7dff);
+
+    overflow-x: hidden;
+}
+
+
+/* =================================
+   START SCREEN
+================================= */
+
+.start-screen {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+
+    position: relative;
+}
+
+
+/* =================================
+   DECORATION
+================================= */
+
+.start-screen::before {
+    content: "✦";
+    position: absolute;
+
+    top: 8%;
+    left: 8%;
+
+    font-size: 55px;
+    color: white;
+
+    transform: rotate(-15deg);
+}
+
+.start-screen::after {
+    content: "★";
+    position: absolute;
+
+    right: 8%;
+    bottom: 10%;
+
+    font-size: 60px;
+    color: #ffe45e;
+
+    transform: rotate(15deg);
+}
+
+
+/* =================================
+   REGISTRATION CARD
+================================= */
+
+.start-card {
+    width: 100%;
+    max-width: 1050px;
+
+    min-height: 600px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 35px;
+
+    padding: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    box-shadow:
+        0 25px 60px rgba(35, 25, 100, 0.25);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   LEFT SIDE
+================================= */
+
+.start-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    background: #e9e7ff;
+
+    border-radius: 50%;
+
+    top: -120px;
+    left: -100px;
+
+    z-index: 0;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero-section {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 34px;
+    font-weight: 900;
+
+    color: #5b50e6;
+
+    margin-bottom: 10px;
+}
+
+.logo::before {
+    content: "🧠";
+    font-size: 40px;
+}
+
+
+/* TITLE */
+
+.start-card h1 {
+    font-size: 34px;
+
+    color: #29245c;
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+}
+
+.start-card > .hero-section p {
+    color: #777;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   HERO IMAGE
+================================= */
+
+.hero-image {
+    width: 250px;
+    height: 250px;
+
+    margin: 15px auto;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eef0ff,
+            #dffaff
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 110px;
+
+    box-shadow:
+        0 15px 30px rgba(91, 80, 230, 0.15);
+
+    transform: rotate(-2deg);
+
+    border: 5px solid white;
+}
+
+
+/* =================================
+   INFO BADGES
+================================= */
+
+.info-badges {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+
+.info-badge {
+    background: #f2f1ff;
+
+    color: #5750b8;
+
+    padding: 9px 13px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =================================
+   FORM SIDE
+================================= */
+
+.form-section {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 15px 20px;
+}
+
+
+/* FORM TITLE */
+
+.form-section h2 {
+    font-size: 26px;
+
+    color: #29245c;
+
+    margin-bottom: 6px;
+}
+
+.form-subtitle {
+    color: #888;
+
+    margin-bottom: 22px;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   LABEL
+================================= */
+
+.form-label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #45415f;
+
+    margin-bottom: 7px;
+}
+
+
+/* =================================
+   INPUT
+================================= */
+
+.start-card input,
+.start-card select {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 17px;
+
+    margin-bottom: 16px;
+
+    border: 2px solid #e5e3f2;
+
+    border-radius: 15px;
+
+    background: #fafaff;
+
+    font-size: 15px;
+
+    color: #333;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+.start-card input::placeholder {
+    color: #aaa;
+}
+
+.start-card input:focus,
+.start-card select:focus {
+    border-color: #6c63ff;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(108, 99, 255, 0.1);
+}
+
+
+/* =================================
+   LANGUAGE
+================================= */
+
+.language-title {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #45415f;
+
+    margin-bottom: 8px;
+}
+
+.language-box {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 17px;
+}
+
+.language {
+    height: 50px;
+
+    border: 2px solid #e5e3f2;
+
+    border-radius: 14px;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.language:hover {
+    transform: translateY(-2px);
+
+    border-color: #6c63ff;
+}
+
+.language.active {
+    background: #6c63ff;
+
+    color: white;
+
+    border-color: #6c63ff;
+
+    box-shadow:
+        0 7px 15px rgba(108, 99, 255, 0.25);
+}
+
+
+/* =================================
+   GRADE
+================================= */
+
+.grade-title {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #45415f;
+
+    margin-bottom: 8px;
+}
+
+
+/* =================================
+   START BUTTON
+================================= */
+
+.start-btn {
+    width: 100%;
+
+    height: 58px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c63ff,
+            #8b7dff
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 20px rgba(108, 99, 255, 0.3);
+
+    transition: 0.25s;
+}
+
+.start-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 25px rgba(108, 99, 255, 0.4);
+}
+
+.start-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =================================
+   SMALL TEXT
+================================= */
+
+.form-note {
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #999;
+
+    margin-top: 13px;
+}
+
+
+/* =================================
+   TEST SCREEN
+================================= */
+
+.test-screen {
+    display: none;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 25px 20px;
+}
+
+
+/* HEADER */
+
+.test-header {
+    background: white;
+
+    padding: 18px 25px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    font-weight: bold;
+}
+
+#timer {
+    color: #ff5d5d;
+
+    font-size: 20px;
+}
+
+
+/* =================================
+   PROGRESS
+================================= */
+
+.progress-area {
+    background: white;
+
+    padding: 17px 20px;
+
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+}
+
+.progress-text {
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+    color: #4c4770;
+}
+
+.progress-bar {
+    width: 100%;
+
+    height: 12px;
+
+    background: #eeeef8;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6c63ff,
+            #9b91ff
+        );
+
+    transition: width 0.3s;
+}
+
+
+/* =================================
+   QUESTION
+================================= */
+
+.question-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+.question-card h2 {
+    font-size: 23px;
+
+    line-height: 1.5;
+
+    color: #29245c;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   ANSWERS
+================================= */
+
+.answers {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.answer {
+    width: 100%;
+
+    padding: 17px;
+
+    border: 2px solid #e4e3ef;
+
+    border-radius: 15px;
+
+    background: white;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.answer:hover {
+    border-color: #6c63ff;
+
+    background: #f7f6ff;
+
+    transform: translateX(3px);
+}
+
+
+/* CORRECT */
+
+.answer.correct {
+    background: #d9f8df;
+
+    border-color: #35b957;
+
+    color: #16732d;
+}
+
+
+/* WRONG */
+
+.answer.wrong {
+    background: #ffe0e0;
+
+    border-color: #ed5151;
+
+    color: #a52828;
+}
+
+
+/* =================================
+   NEXT
+================================= */
+
+.next-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #6c63ff;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background: #574edc;
+}
+
+
+/* =================================
+   RESULT
+================================= */
+
+.result-screen {
+    display: none;
+
+    min-height: 100vh;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.result-card {
+    width: 100%;
+
+    max-width: 520px;
+
+    background: white;
+
+    padding: 45px 35px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(35, 25, 100, 0.25);
+}
+
+.result-icon {
+    font-size: 70px;
+
+    margin-bottom: 10px;
+}
+
+.result-card h1 {
+    color: #29245c;
+
+    margin-bottom: 25px;
+}
+
+.student-result {
+    background: #f5f4ff;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    margin-bottom: 22px;
+}
+
+.student-result p {
+    margin: 8px;
+
+    font-size: 16px;
+}
+
+.score {
+    margin: 20px 0;
+}
+
+.score div {
+    font-size: 35px;
+}
+
+.score strong {
+    font-size: 38px;
+
+    color: #29245c;
+}
+
+.percentage {
+    font-size: 48px;
+
+    font-weight: 900;
+
+    color: #6c63ff;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   HOME BUTTON
+================================= */
+
+.home-btn {
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #6c63ff;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.home-btn:hover {
+    background: #574edc;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 750px) {
+
+    .start-card {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+
+        gap: 10px;
+    }
+
+    .hero-section {
+        padding: 10px;
+    }
+
+    .hero-image {
+        width: 180px;
+        height: 180px;
+
+        font-size: 80px;
+    }
+
+    .start-card h1 {
+        font-size: 27px;
+    }
+
+    .form-section {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .start-screen {
+        padding: 15px;
+    }
+
+    .start-card {
+        border-radius: 25px;
+
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .start-card h1 {
+        font-size: 23px;
+    }
+
+    .hero-image {
+        width: 150px;
+        height: 150px;
+
+        font-size: 65px;
+    }
+
+    .language {
+        font-size: 13px;
+    }
+
+    .question-card {
+        padding: 22px;
+    }
+
+    .question-card h2 {
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT KIDS — Test</title>
+
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BOSHLANG‘ICH OYNA
+    ========================== -->
+
+    <div class="start-screen" id="startScreen">
+
+        <div class="start-card">
+
+
+            <!-- CHAP TOMON -->
+            <div class="hero-section">
+
+                <div class="logo">
+                    FINAL IT TEST
+                </div>
+
+                <h1 id="title">
+                    IT olamiga xush kelibsiz! 🚀
+                </h1>
+
+                <p id="subtitle">
+                    Bilimingizni sinab ko‘ring va o‘z natijangizni biling!
+                </p>
+
+
+                <!-- HOZIRCHA RASM O‘RNIGA -->
+                <div class="hero-image">
+                    👨‍💻
+                </div>
+
+
+                <!-- MA'LUMOTLAR -->
+                <div class="info-badges">
+
+                    <span class="info-badge">
+                        🧠 30 ta savol
+                    </span>
+
+                    <span class="info-badge">
+                        ⏱️ 30 daqiqa
+                    </span>
+
+                    <span class="info-badge">
+                        ⭐ Ball
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- O‘NG TOMON -->
+            <div class="form-section">
+
+                <h2>
+                    🚀 Testga qo‘shiling!
+                </h2>
+
+                <p class="form-subtitle">
+                    Avval ma’lumotlaringizni kiriting
+                </p>
+
+
+                <!-- ISM -->
+                <label class="form-label">
+                    👤 Ismingiz
+                </label>
+
+                <input
+                    type="text"
+                    id="firstName"
+                    placeholder="Ismingizni kiriting"
+                    autocomplete="off"
+                >
+
+
+                <!-- FAMILIYA -->
+                <label class="form-label">
+                    👤 Familiyangiz
+                </label>
+
+                <input
+                    type="text"
+                    id="lastName"
+                    placeholder="Familiyangizni kiriting"
+                    autocomplete="off"
+                >
+
+
+                <!-- TIL -->
+                <div class="language-title">
+                    🌐 Tilni tanlang
+                </div>
+
+                <div class="language-box">
+
+                    <button
+                        class="language active"
+                        onclick="setLanguage('uz')"
+                        id="uzBtn">
+
+                        🇺🇿 O‘zbek
+
+                    </button>
+
+
+                    <button
+                        class="language"
+                        onclick="setLanguage('ru')"
+                        id="ruBtn">
+
+                        🇷🇺 Русский
+
+                    </button>
+
+                </div>
+
+
+                <!-- SINF -->
+                <div class="grade-title">
+                    🎒 Sinfingiz
+                </div>
+
+                <select id="grade">
+
+                    <option value="">
+                        Sinfni tanlang
+                    </option>
+
+                    <option value="5">
+                        5-sinf
+                    </option>
+
+                    <option value="6">
+                        6-sinf
+                    </option>
+
+                </select>
+
+
+                <!-- BOSHLASH -->
+                <button
+                    class="start-btn"
+                    onclick="startTest()"
+                    id="startBtn">
+
+                    🚀 TESTNI BOSHLASH
+
+                </button>
+
+
+                <p class="form-note">
+                    🎯 Tayyormisiz? Unda boshladik!
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         TEST OYNASI
+    ========================== -->
+
+    <div class="test-screen" id="testScreen">
+
+
+        <!-- HEADER -->
+        <div class="test-header">
+
+            <div>
+                👤
+                <span id="studentName"></span>
+            </div>
+
+            <div>
+                ⏱️
+                <span id="timer">
+                    20:00
+                </span>
+            </div>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+        <div class="progress-area">
+
+            <div class="progress-text">
+
+                📝
+                <span id="questionNumber">
+                    1
+                </span>
+                / 30
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAVOL -->
+        <div class="question-card">
+
+            <h2 id="question">
+                Savol
+            </h2>
+
+
+            <!-- JAVOBLAR -->
+            <div
+                class="answers"
+                id="answers">
+            </div>
+
+
+            <!-- KEYINGI -->
+            <button
+                class="next-btn"
+                id="nextBtn"
+                onclick="nextQuestion()">
+
+                Keyingi →
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         NATIJA
+    ========================== -->
+
+    <div class="result-screen" id="resultScreen">
+
+        <div class="result-card">
+
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+
+            <h1 id="resultTitle">
+                Test yakunlandi!
+            </h1>
+
+
+            <!-- O‘QUVCHI -->
+            <div class="student-result">
+
+                <p>
+                    👤
+                    <span id="resultName"></span>
+                </p>
+
+                <p>
+                    🏫
+                    <span id="resultGrade"></span>
+                </p>
+
+            </div>
+
+
+            <!-- BALL -->
+            <div class="score">
+
+                <div>
+                    ⭐
+                </div>
+
+                <strong id="score">
+                    0 / 30
+                </strong>
+
+            </div>
+
+
+            <!-- FOIZ -->
+            <div class="percentage">
+
+                <span id="percentage">
+                    0%
+                </span>
+
+            </div>
+
+
+            <!-- BOSH SAHIFA -->
+            <button
+                class="home-btn"
+                onclick="goHome()"
+                id="homeBtn">
+
+                🏠 Bosh sahifaga qaytish
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="test.js"></script>
+
+</body>
+
+</html>
